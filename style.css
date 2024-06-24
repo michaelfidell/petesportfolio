@@ -1,54 +1,48 @@
-/* The @import rule below imports the Playfair Display and Source Sans Pro fonts into the stylesheet. You don't have to edit this line.*/
+/* The @import rule below imports the Playfair Display and Source Sans Pro fonts into the stylesheet*/
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@400&display=swap");
 
 body {
+  background-color: #eae2b7;
   color: #003049;
   font-family: "Source Sans Pro", Tahoma, Geneva, Verdana, sans-serif;
   padding: 40px;
-  background-color: #eae2b7;
 }
 
-/* Set the font family for any h1, h2, or h3 heading */
+/* Headings */
 h1,
 h2,
 h3 {
   font-family: "Playfair Display", Times, serif;
-}
-h1,
-h2,
-h3 {
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
+/* Header */
+header {
+  display: flex; /* browser cross compatibility */
+  justify-content: center; /* center content horizontally */
+  align-items: center; /*center items vertically*/
+  padding: 20px;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 10px;
+header h1 {
+  margin: 0;
 }
 
-nav ul li a {
-  color: #d62828;
+nav a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: #003049;
 }
 
-ol li a {
-  color: #d62828;
-}
-
-a:visited {
-  color: #f41a1a;
-}
-
-a:hover {
-  color: #f77f00
+/* Containers */
+div {
+  background-color: #eae2b7;
+  margin: auto;
+  width: 600px;
 }
 
 article {
-  padding: 10px 0;
+  padding: 50px 0;
 }
 
 article div {
@@ -56,34 +50,71 @@ article div {
   width: 100%;
 }
 
-p {
+/* About section */
+.about-container {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.about-container div {
+  width: 45%;
+}
+
+.about-container h3 {
+  text-align: center;
+}
+
+.about-container p{
+  text-align: left;
   line-height: 1.5;
 }
 
-/* The div container constrains the content width within the main container to 600px */
-div {
-  margin: auto;
-  width: 600px;
+.about-container ul>li {
+  text-align: left;
 }
 
+/* Links */
+a:link {
+  color: #d62828;
+}
+
+a:hover {
+  color: #f77f00;
+}
+
+/* Portfolio section */
+.portfolio-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio-container section {
+  width: 30%;
+}
+
+.portfolio-container p {
+  font-size: 14px;
+}
+
+/* Images */
 img {
   width: 100%;
   max-width: 200px;
   height: auto;
 }
 
+.image-circle {
+  border: 2px solid #003049;
+  border-radius: 50%;
+}
 
+/* Footer */
+footer {
+  text-align: center;
+}
+
+/* Other page elements */
 hr {
   border: 1px solid black;
-  margin: 40px;
-  margin-bottom: 60px;
-}
-
-.image-circle {
-  border-radius: 50%;
-  border: 2px solid #003049;
-}
-
-footer p {
-  text-align: center;
 }
